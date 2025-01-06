@@ -1,0 +1,185 @@
+<html> 
+<head> 
+  <title>Hobby</title> 
+  <link rel="stylesheet" href="hobby.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style> 
+    body { 
+    font-family: "Lobster", sans-serif; 
+    font-weight: 400; 
+    font-style: normal; 
+	background-image: url('coquette.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+    } 
+  </style> 
+</head>
+
+<body>
+    <header> 
+        <nav> 
+        <a href="index.html"> 
+          <div class="image-logo-hover"></div>
+        </a> 
+       <ul> 
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="hobby.html"><strong>Hobby</strong></a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+       </ul> 
+       </nav> 
+      </header>
+
+      <section class="Hobby">
+        <h1>My Hobby</h1><br>
+        <div class="baking-content">
+          <div class="text-content">
+            <h2>Baking</h2>
+            <p>Since I was six years old, I have had a great passion for baking. I have made various types of desserts, with most of the recipes coming from my mother. My parents have always supported this hobby of mine by buying baking equipment for me.</p>
+          <div class="row">
+            <div class="column">
+              <img src="baking1.jpg">
+            </div>
+            <div class="column">
+              <img src="baking2.jpg">
+            </div>
+          </div>
+        </div>
+
+        <div class="concert-content">
+          <div class="text-content">
+            <h2>Go to Concerts</h2>
+            <p>Attending concerts is one of my favourite hobbies. Going to concerts makes me to appreciate music, especially local music from bands such as Hujan, Kugiran Masdo, Spider, and many others</p>
+          <div class="row">
+            <div class="column">
+              <img src="concert1.jpg">
+            </div>
+            <div class="column">
+              <img src="concert2.jpg">
+            </div>
+          </div>
+        </div>
+
+        <div class="snorkelling-content">
+          <div class="text-content">
+            <h2>Snorkelling</h2>
+            <p>I am very fond of outdoor activities, and snorkelling is one of my top choices. This activity has truly amazed me with the beauty and wonder of marine life.</p>
+          <div class="row">
+            <div class="column">
+              <img src="snorkel1.jpg">
+            </div>
+            <div class="column">
+              <img src="snorkel2.jpg">
+            </div>
+          </div>
+        </div>
+		<p><a href="#top">Back On Top</a></p>
+      </section>
+
+      <footer> 
+        <div class="footer-content"> 
+         <div class="social-media">
+           <a href="https://www.instagram.com/zulaykhaaa_?igsh=MWs0Y3E0djZ6b2J2Nw%3D%3D&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+		   <a href="https://www.threads.net/@zulaykhaaa_?igshid=NTc4MTIwNjQ2YQ=="><i class="fa-brands fa-twitter"></i></a>
+		   <canvas id="canvas" width="100" height="100" style="background-color:#333">
+      </canvas>
+         </div>
+         <div class="footer-navigation">
+           <ul>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="aboutme.html">About Me</a></li>
+             <li><a href="hobby.html">Hobby</a></li>
+             <li><a href="gallery.html">Gallery</a></li>
+             <li><a href="contact.html">Contact</a></li>
+           </ul>
+         </div>
+         </div>
+         <div class="footer-bottom">
+           <p>Copyright &copy; 2024 Designed by <span class="designer">Nur Zulaikha</span></p>
+         </div>
+       </footer> 
+	  <script>
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  const grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(let num = 1; num < 13; num++){
+    let ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    const now = new Date();
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script>
+</body>
+</html>

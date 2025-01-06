@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*HEADER*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80px;
+}
+
+/*--------------- image hover ----------------*/
+.image-logo-hover {
+    width: 90px; /* Specify the width */
+    height: 40px; /* Specify the height */
+    background-image: url('1.png'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+.image-logo-hover:hover {
+    background-image: url('2.png'); /* Change on hover */
+}
+/*--------------- image hover end ----------------*/
+
+/*NAVIGATION BAR*/
+nav{
+    font-size: 20px;
+    display: flex; /* it sets the display property of the element to flex, enabling a flex container */
+    justify-content: space-between; /* creating a horizontal navigation bar where items are spaced evenly. */
+    align-items: center; /* In a horizontal layout, it centers the items vertically.*/
+    top: 0; /*  fixes the element at the top of the viewport when using a fixed position */
+    width: 100%; /*  it ensures that it will span the entire width of its containing element */
+    padding: 20px;
+    background:#f6ddcc ; /* The background is #f6ddcc/
+    z-index: 1; /* This property determines the stacking order of positioned elements */
+}
+
+nav img{
+    height: 40px; /* Determining the height of the image*/
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none; /* Removing the default listing style */
+    margin: 0;
+    padding: 0;
+    display: flex; /* it makes the list items flex items */
+}
+
+nav ul li {
+    display: inline-block; /* makes list items appear horizontally next to each other */
+    margin: 0 20px; 
+    position: relative; /*  it is used for absolute positioning of pseudo-elements */
+}
+
+nav ul li a {
+    text-decoration: none; /* No text decoration */
+    color: black; /* texts are coloured black*/
+}
+
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffd8de;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li:hover:after{ /* creating a horizontal line */
+    width: 100%;
+}
+
+/*DIRECTORY*/
+.directory-content ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+	background-color: #e6b0aa;
+}
+
+.directory-content ul li a {
+    color: rgb(0, 0, 0);
+    margin: 30px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.directory-content ul li a:hover {
+    opacity: 1;
+}
+
+/*HISTORY*/
+#history {
+    padding: 30px;
+}
+
+.history-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 30px;
+    gap: 20px;
+}
+
+#history .text-content {
+    margin-left: 50px;
+    flex: 1;
+    max-width: 60%; 
+}
+
+.text-content p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 0;
+    font-size: 1.4em;
+    font-style: italic;
+    color: #4c4d4c;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 20px; 
+    font-size: 1.8em;
+}
+
+.history-image {
+    margin-right: 50px;
+}
+
+.history-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+table, td, th {  
+    border: 1px solid #000;
+    text-align: left;
+  }
+  
+  table {
+    margin-top: 10px;
+    width: 50%;
+  }
+  
+  th, td {
+    padding: 10px;
+  }
+
+/*EDUCATION*/
+#education .text-content {
+    margin: 30px 0 30px 80px;
+}
+
+.text-content ul li {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    font-style: italic;
+    color: #4c4d4c;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  
+.column img, video {
+    width: 80%;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+/*ACHIEVEMENT*/
+#achievement .text-content {
+    margin: 30px 0 30px 80px;
+}
+
+#achievement h1 {
+    margin-left: 80px;
+    margin-bottom: -10px;
+}
+#achievement .text-content h2 {
+    font-size: 1.6em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px; 
+}
+
+.text-content ol li {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    font-style: italic;
+    color: #4c4d4c;
+}
+
+.custom-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #4c4d4c;
+}
+
+.custom-list li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 30px; /* Space for the arrow */
+}
+
+.custom-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('arrow.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*FAMILY*/
+#Family {
+    padding: 20px;
+}
+#Family .text-content {
+    margin: 30px 80px 0 80px;
+}
+
+#Family .text-content p {
+    margin-bottom: 20px;
+}
+
+#Family h1 {
+    margin-left: 80px;
+    margin-bottom: -10px;
+}
+
+#Family .text-content h2 {
+    font-size: 1.6em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px; 
+}
+
+#Family .column img{
+    width: 60%;
+}
+  
+/*EXPERIENCE*/
+#Experience .text-content {
+    margin: 30px 80px 30px 80px;
+}
+ 
+#Experience .text-content p {
+    margin-bottom: 20px;
+}
+
+#Experience .column img, video {
+    width: 95%;
+}
+
+/*FOOTER*/
+footer {
+    padding: 0;
+    margin-top: 50px;
+    box-sizing: border-box;
+    background-color: #333;
+}
+
+.footer-content {
+    width: 100%;
+    padding: 70px 0 20px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+}
+
+.social-media a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.social-media a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.social-media a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footer-navigation {
+    margin: 30px 0;
+}
+
+.footer-navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-navigation ul li a {
+    color: #e6b0aa;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footer-navigation ul li a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}

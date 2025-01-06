@@ -1,0 +1,226 @@
+/*HEADER*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50px;
+}
+
+/*--------------- image hover ----------------*/
+.image-logo-hover {
+    width: 90px; /* Specify the width */
+    height: 40px; /* Specify the height */
+    background-image: url('1.png'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+.image-logo-hover:hover {
+    background-image: url('2.png'); /* Change on hover */
+}
+/*--------------- image hover end ----------------*/
+
+/*NAVIGATION BAR*/
+nav{
+    font-size: 20px;
+    display: flex; /* it sets the display property of the element to flex, enabling a flex container */
+    justify-content: space-between; /* creating a horizontal navigation bar where items are spaced evenly. */
+    align-items: center; /* In a horizontal layout, it centers the items vertically.*/
+    position: fixed; /* This positions the element as fixed, meaning it will stay in the same place on the screen even when the user scrolls */
+    top: 0; /*  fixes the element at the top of the viewport when using a fixed position */
+    width: 100%; /*  it ensures that it will span the entire width of its containing element */
+    padding: 20px;
+    background:#f6ddcc ; /* The background is #f6ddcc/
+    z-index: 1; /* This property determines the stacking order of positioned elements */
+}
+
+nav img{
+    height: 40px; /* Determining the height of the image*/
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none; /* Removing the default listing style */
+    margin: 0;
+    padding: 0;
+    display: flex; /* it makes the list items flex items */
+}
+
+nav ul li {
+    display: inline-block; /* makes list items appear horizontally next to each other */
+    margin: 0 20px; 
+    position: relative; /*  it is used for absolute positioning of pseudo-elements */
+}
+
+nav ul li a {
+    text-decoration: none; /* No text decoration */
+    color: black; /* texts are coloured black*/
+}
+
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffd8de;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li:hover:after{ /* creating a horizontal line */
+    width: 100%;
+}
+
+/*ABOUT US*/
+#about {
+    padding: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 30px;
+    gap: 20px;
+}
+
+#about .text-content {
+    flex: 1;
+    max-width: 70%; 
+    margin-left: 40px;
+}
+
+.text-content h1 {
+    margin-bottom: 20px; 
+    font-size: 1.8em;
+}
+
+.text-content p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 0;
+    font-size: 1.4em;
+    line-height: 1.6;
+    font-style: italic;
+    color: #4c4d4c;
+    margin-bottom: 50px;
+}
+
+.about-content img {
+    width: 300px; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-right: 20px;
+}
+
+/*BUTTON*/
+button {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.4s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+  
+button:hover {
+    background-color: #c09ba1; 
+    color: white;
+  }
+ 
+/*FOOTER*/
+footer {
+    padding: 0;
+    margin-top: 50px;
+    box-sizing: border-box;
+    background-color: #333;
+}
+
+.footer-content {
+    width: 100%;
+    padding: 70px 0 20px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.social-media a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+}
+
+.social-media a i {
+    font-size: 2.5em;
+    color: black;
+    opacity: 0.9;
+}
+
+.social-media a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.social-media a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footer-navigation {
+    margin: 30px 0;
+}
+
+.footer-navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-navigation ul li a {
+    color: #e6b0aa;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footer-navigation ul li a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}

@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.center {
+  margin: auto;
+  width: 500px;
+  /*border: 3px solid #73AD21;*/
+  padding: 10px;
+  
+}
+
+/*HEADER*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80px;
+}
+
+/*--------------- image hover ----------------*/
+.image-logo-hover {
+    width: 90px; /* Specify the width */
+    height: 40px; /* Specify the height */
+    background-image: url('1.png'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+.image-logo-hover:hover {
+    background-image: url('2.png'); /* Change on hover */
+}
+/*--------------- image hover end ----------------*/
+
+
+/*NAVIGATION BAR*/
+nav{
+    font-size: 20px;
+    display: flex; /* it sets the display property of the element to flex, enabling a flex container */
+    justify-content: space-between; /* creating a horizontal navigation bar where items are spaced evenly. */
+    align-items: center; /* In a horizontal layout, it centers the items vertically.*/
+    top: 0; /*  fixes the element at the top of the viewport when using a fixed position */
+    width: 100%; /*  it ensures that it will span the entire width of its containing element */
+    padding: 20px;
+    background:#f6ddcc ; /* The background is #f6ddcc/
+    z-index: 1; /* This property determines the stacking order of positioned elements */
+}
+
+nav img{
+    height: 40px; /* Determining the height of the image*/
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none; /* Removing the default listing style */
+    margin: 0;
+    padding: 0;
+    display: flex; /* it makes the list items flex items */
+}
+
+nav ul li {
+    display: inline-block; /* makes list items appear horizontally next to each other */
+    margin: 0 20px; 
+    position: relative; /*  it is used for absolute positioning of pseudo-elements */
+}
+
+nav ul li a {
+    text-decoration: none; /* No text decoration */
+    color: black; /* texts are coloured black*/
+}
+
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffd8de;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li:hover:after{ /* creating a horizontal line */
+    width: 100%;
+}
+
+/*FORM*/
+/* Centering the contact form */
+.center {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #da88ac;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+
+.center form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align the form to the left */
+}
+
+p {
+    margin-bottom: 15px;
+  }
+
+  form p {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  strong {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+    display: block;
+  }
+
+form p strong {
+    margin-right: 10px;
+}
+
+.center label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.center input,
+.center textarea,
+.center select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.center input[type="submit"] {
+    padding: 12px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+
+.center textarea {
+    resize: vertical;
+}
+
+/* Radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/*FOOTER*/
+footer {
+    padding: 0;
+    margin-top: 50px;
+    box-sizing: border-box;
+    background-color: #333;
+}
+
+.footer-content {
+    width: 100%;
+    padding: 70px 0 20px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+}
+
+.social-media a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.social-media a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.social-media a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footer-navigation {
+    margin: 30px 0;
+}
+
+.footer-navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-navigation ul li a {
+    color: #e6b0aa;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footer-navigation ul li a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}

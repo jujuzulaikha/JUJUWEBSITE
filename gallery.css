@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------------- image hover ----------------*/
+.image-logo-hover {
+    width: 90px; /* Specify the width */
+    height: 40px; /* Specify the height */
+    background-image: url('1.png'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+.image-logo-hover:hover {
+    background-image: url('2.png'); /* Change on hover */
+}
+/*--------------- image hover end ----------------*/
+
+/*--------------- gallery hover ----------------*/
+
+.gallery {
+  width: 90px;
+  height: 120px;
+  transition: width 1s, height 1s;
+}
+
+.gallery:hover {
+  width: 330px;
+  height: 420px;
+}
+/*--------------- gallery hover end ----------------*/
+
+/*HEADER*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80px;
+}
+
+/*NAVIGATION BAR*/
+nav{
+    font-size: 20px;
+    display: flex; /* it sets the display property of the element to flex, enabling a flex container */
+    justify-content: space-between; /* creating a horizontal navigation bar where items are spaced evenly. */
+    align-items: center; /* In a horizontal layout, it centers the items vertically.*/
+    top: 0; /*  fixes the element at the top of the viewport when using a fixed position */
+    width: 100%; /*  it ensures that it will span the entire width of its containing element */
+    padding: 20px;
+    background:#f6ddcc ; /* The background is #f6ddcc/
+    z-index: 1; /* This property determines the stacking order of positioned elements */
+}
+
+nav img{
+    height: 40px; /* Determining the height of the image*/
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none; /* Removing the default listing style */
+    margin: 0;
+    padding: 0;
+    display: flex; /* it makes the list items flex items */
+}
+
+nav ul li {
+    display: inline-block; /* makes list items appear horizontally next to each other */
+    margin: 0 20px; 
+    position: relative; /*  it is used for absolute positioning of pseudo-elements */
+}
+
+nav ul li a {
+    text-decoration: none; /* No text decoration */
+    color: black; /* texts are coloured black*/
+}
+
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ffd8de;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li:hover:after{ /* creating a horizontal line */
+    width: 100%;
+}
+
+/*DIRECTORY*/
+.directory-content ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+	background-color: #e6b0aa;
+}
+
+.directory-content ul li a {
+    color: rgb(0, 0, 0);
+    margin: 30px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.directory-content ul li a:hover {
+    opacity: 1;
+}
+
+h1 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.column {
+    float: left;
+    width: 33.3%;
+    padding: 5px;
+    margin-bottom: 30px;
+  }
+  
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*FOOTER*/
+footer {
+    padding: 0;
+    margin-top: 50px;
+    box-sizing: border-box;
+    background-color: #333;
+}
+
+.footer-content {
+    width: 100%;
+    padding: 70px 0 20px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+}
+
+.social-media a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.social-media a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.social-media a:hover i {
+    color:#e6b0aa;
+    transition: 0.5s;
+}
+
+.footer-navigation {
+    margin: 30px 0;
+}
+
+.footer-navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-navigation ul li a {
+    color: #e6b0aa;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footer-navigation ul li a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
